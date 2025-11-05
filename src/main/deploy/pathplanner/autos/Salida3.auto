@@ -7,7 +7,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Salida_01"
+            "pathName": "Salida_03"
           }
         },
         {
@@ -25,7 +25,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Human01_01"
+            "pathName": "Human01_03"
           }
         },
         {
@@ -37,7 +37,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Coral2_01"
+            "pathName": "Coral2_02"
           }
         },
         {
@@ -55,7 +55,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Human02_01"
+            "pathName": "Human02_02"
           }
         },
         {
@@ -67,7 +67,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Coral3_01"
+            "pathName": "Coral3_02"
           }
         },
         {
@@ -85,7 +85,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Human03_01"
+            "pathName": "Human03_02"
           }
         }
       ]

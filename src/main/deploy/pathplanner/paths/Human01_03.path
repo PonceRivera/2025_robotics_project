@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 5.844991438356164,
+        "y": 4.060963114754099
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 6.995811110487311,
+        "y": 1.8432377049180335
+      },
+      "isLocked": false,
+      "linkedName": "EnCoral01_03"
+    },
+    {
+      "anchor": {
+        "x": 0.9616438356164383,
+        "y": 0.7569135273972597
+      },
+      "prevControl": {
+        "x": 2.6039594093869303,
+        "y": 1.2963602487087338
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "EnHuman02"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.72,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 53.13010235415593
+  },
+  "reversed": false,
+  "folder": null,
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "useDefaultConstraints": true
+}

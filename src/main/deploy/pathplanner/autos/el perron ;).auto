@@ -1,0 +1,55 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperronsalida"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperronh1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperrona1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperronh2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperrona2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperronh3"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "elperrona3"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}

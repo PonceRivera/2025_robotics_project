@@ -31,29 +31,29 @@ public final class Constants {
     public static final double elevador_ff = 0.0001;
     public static final double elevador_maxVelocity = 3000;
     public static final double elevador_maxAcceleration = 5000;
-    public static final double elevador_LoopError = 0.5;
-    public static final double elevador_minSetPoint = -200;
-    public static final double elevador_maxSetPoint = 480;
+    public static final double elevador_LoopError = 0.3;
+    public static final double elevador_minSetPoint = -120;
+    public static final double elevador_maxSetPoint = 495;
 
-    public static final double brazo_p = 0.2;
+    public static final double brazo_p = 0.1;
     public static final double brazo_i = 0;
     public static final double brazo_d = 0.001;
-    public static final double brazo_ff = 0.0001;
-    public static final double brazo_maxVelocity = 3000;
-    public static final double brazo_maxAcceleration = 5000;
-    public static final double brazo_LoopError = 0.2;
-    public static final double brazo_minSetPoint = -7;
-    public static final double brazo_maxSetPoint = 7;
+    public static final double brazo_ff = 0.001;
+    public static final double brazo_maxVelocity = 2000;
+    public static final double brazo_maxAcceleration = 3000;
+    public static final double brazo_LoopError = 0.5;
+    public static final double brazo_minSetPoint = -100;
+    public static final double brazo_maxSetPoint = 140;
 
     public static final double giro_p = 0.1;
     public static final double giro_i = 0;
     public static final double giro_d = 0;
     public static final double giro_ff = 0.0001;
     public static final double giro_maxVelocity = 3000;
-    public static final double giro_maxAcceleration = 5000;
-    public static final double giro_LoopError = 0.5;
-    public static final double giro_minSetPoint = 0;
-    public static final double giro_maxSetPoint = 3;
+    public static final double giro_maxAcceleration = 2000;
+    public static final double giro_LoopError = 0.05;
+    public static final double giro_minSetPoint = -0.8;
+    public static final double giro_maxSetPoint = 0.8;
   }
 
   public static class Valores_Elevador {

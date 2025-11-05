@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 1.6638337468982625,
-        "y": 7.340880893300248
+        "x": 5.093707191780822,
+        "y": 5.069285102739726
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.0034119106699744,
-        "y": 6.561848635235732
+        "x": 1.3523116438356162,
+        "y": 7.217958047945206
       },
       "isLocked": false,
-      "linkedName": "EnHuman"
+      "linkedName": "el perron"
     },
     {
       "anchor": {
-        "x": 3.464446721311475,
-        "y": 5.343647540983607
+        "x": 1.3372859589041095,
+        "y": 7.248009417808219
       },
       "prevControl": {
-        "x": 2.7724565756823822,
-        "y": 6.441997518610422
+        "x": 5.108732876712329,
+        "y": 5.069285102739726
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Coral3"
+      "linkedName": "el perron 2"
     }
   ],
   "rotationTargets": [],
@@ -42,13 +42,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 30.3791260113683
+    "rotation": -54.462322208025526
   },
   "reversed": false,
   "folder": null,
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -142.88313931672968
+    "rotation": -125.13419305691573
   },
   "useDefaultConstraints": true
 }

@@ -19,10 +19,6 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.generated.TunerConstants;
 import frc.robot.subsystems.CommandSwerveDrivetrain;
-import frc.robot.subsystems.ElevadorSubsystem;
-import frc.robot.subsystems.ElevadorSubsystem.PosicionBrazo;
-import frc.robot.subsystems.ElevadorSubsystem.PosicionElevador;
-import frc.robot.subsystems.ElevadorSubsystem.PosicionGiro;
 import frc.robot.subsystems.kitbot;
 
 public class RobotContainer {
@@ -47,19 +43,23 @@ public class RobotContainer {
 
   private final Telemetry logger = new Telemetry(MaxSpeed);
 
-  private final CommandXboxController joystick = new CommandXboxController(0);
+  
 
-  private final Joystick joystick2 = new Joystick(1);
+  private final Joystick joystick2 = new Joystick(0);
 
   public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
-
   public final kitbot m_kitbot = new kitbot();
-  public final ElevadorSubsystem m_elevador = new ElevadorSubsystem();
+
 
   public RobotContainer() {
-
+    
+    NamedCommands.registerCommand("Deja", m_kitbot.Deja_CoralA());
+    NamedCommands.registerCommand("Espera", m_kitbot.Espera());
     autoChooser = AutoBuilder.buildAutoChooser("Tests");
     SmartDashboard.putData("Auto Mode", autoChooser);
+    
+        
+
     configureBindings();
   }
 
@@ -92,39 +92,17 @@ public class RobotContainer {
                             * MaxAngularRate) // Drive counterclockwise with negative X (left)
             ));
 
-    // m_elevador.setDefaultCommand(m_elevador.Ver_Sensor());
-    // joystick.a().whileTrue(drivetrain.applyRequest(() -> brake));
+    
 
-    m_elevador.setDefaultCommand(
-        m_elevador.controlLoopCommand(
-            joystick::getLeftY,
-            joystick::getRightY,
-            joystick::getRightX,
-            () -> joystick.getLeftTriggerAxis() > 0.1,
-            () -> joystick.getRightTriggerAxis() > 0.1));
 
     new Trigger(joystick2.button(2, Robot.m_loop)).whileTrue(drivetrain.applyRequest(() -> brake));
+    new Trigger(joystick2.button(1, Robot.m_loop)).onTrue(m_kitbot.Deja_Coral());    
 
-    joystick.leftBumper().onTrue(m_elevador.mandarElevadorAPosicion(PosicionElevador.L4));
-
-    new Trigger(joystick2.button(3, Robot.m_loop))
-        .whileTrue(
-            drivetrain.applyRequest(
-                () ->
-                    point.withModuleDirection(
-                        new Rotation2d(-joystick2.getY(), -joystick2.getX()))));
-
-    //  exampleTrigger.onTrue(m_elevador.taker_stop());
-    drivetrain.registerTelemetry(logger::telemeterize);
-
-    NamedCommands.registerCommand(
-        "L1",
-        m_elevador.mandarSistemaAPosiciones(
-            PosicionElevador.L1, PosicionBrazo.DejarL1, PosicionGiro.Vertical));
+   drivetrain.registerTelemetry(logger::telemeterize);
   }
 
   public Command getAutonomousCommand() {
-
     return autoChooser.getSelected();
   }
+  
 }
