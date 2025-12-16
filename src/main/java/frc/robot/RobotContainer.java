@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.generated.TunerConstants;
 import frc.robot.subsystems.CommandSwerveDrivetrain;
-import frc.robot.subsystems.kitbot;
+//import frc.robot.subsystems.kitbot;
 
 public class RobotContainer {
 
@@ -48,13 +48,13 @@ public class RobotContainer {
   private final Joystick joystick2 = new Joystick(0);
 
   public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
-  public final kitbot m_kitbot = new kitbot();
+  //Descometar en caso de que se vaya a usar el kitbot public final kitbot m_kitbot = new kitbot();
 
 
   public RobotContainer() {
     
-    NamedCommands.registerCommand("Deja", m_kitbot.Deja_CoralA());
-    NamedCommands.registerCommand("Espera", m_kitbot.Espera());
+   //Descometar en caso de que se vaya a usar el kitbot NamedCommands.registerCommand("Deja", m_kitbot.Deja_CoralA());
+    //Descometar en caso de que se vaya a usar el kitbot amedCommands.registerCommand("Espera", m_kitbot.Espera());
     autoChooser = AutoBuilder.buildAutoChooser("Tests");
     SmartDashboard.putData("Auto Mode", autoChooser);
     
@@ -96,7 +96,7 @@ public class RobotContainer {
 
 
     new Trigger(joystick2.button(2, Robot.m_loop)).whileTrue(drivetrain.applyRequest(() -> brake));
-    new Trigger(joystick2.button(1, Robot.m_loop)).onTrue(m_kitbot.Deja_Coral());    
+    // Descometar en caso de que se vaya a usar el kitbotnew Trigger(joystick2.button(1, Robot.m_loop)).onTrue(m_kitbot.Deja_Coral());    
 
    drivetrain.registerTelemetry(logger::telemeterize);
   }
